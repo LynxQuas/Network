@@ -1,0 +1,36 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+{% for post in get_pages %}
+
+<div style="width: 23rem; border:1px solid black; margin: 1rem auto">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center my-2">
+            <a href="{% url 'profile' post.author.id %}" class="card-link"><strong>{{ post.author }}</strong></a>
+            {% if post.author == user %}
+            <button class="btn btn-primary btn_edit" data-post-id="{{post.id}}">Edit</button>
+            {% endif %}
+        </div>
+        <p class="card-text content" data-content-id="{{post.id}}">{{ post.content }}</p>
+        <small>{{ post.timestamp }}</small>
+        <br>
+        <span class="reaction" data-reaction="{{post.id}}" data-current-user="{{user}}">❤️
+            <strong class="like-counts"> {{post.likes.count}}</strong></span>
+    </div>
+</div>
+{% endfor %}
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        {% if get_pages.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page={{get_pages.previous_page_number}}">Previous</a></li>
+        {% endif %}
+
+        {% if get_pages.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{get_pages.next_page_number}}">Next</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+{% endblock %}

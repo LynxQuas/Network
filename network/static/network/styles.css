@@ -1,0 +1,47 @@
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    display: flex;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.alert-warning {
+    display: none;
+}
+
+span {
+    cursor: pointer;
+}
+
+.followings {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.followings > span {
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.follow-btn-container {
+    display: flex;
+    justify-content: center;
+}

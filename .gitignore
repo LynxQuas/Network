@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local development settings
+local_settings.py
+
+# Database
+db.sqlite3
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# Virtual environment
+venv/
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Compiled Python files
+*.pyc
+
+# Logs
+*.log
+
+# Backup files
+*~
+
+# Temporary files
+*.swp
+
+# Environment variables
+.env
+
+# Dependency directories
+env/
+lib/
+lib64/
+bin/
+
+# Ignore migrations
+**/migrations/
+
+# Ignore secrets file
+secrets.json
+
+# Ignore local configuration
+config.local.yml
